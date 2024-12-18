@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 using BLL.Managers;
 
@@ -19,6 +20,15 @@ namespace UI
 
             // Populate dashboard panels
             PopulateDashboard();
+            
+            dataGridUpcomingExpirations.BackgroundColor = Color.FromArgb(46, 51, 73); // Koyu gri arka plan rengi
+            dataGridUpcomingExpirations.DefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73); // Hücre arka plan rengi
+            dataGridUpcomingExpirations.DefaultCellStyle.ForeColor = Color.White; // Metin rengi
+            
+            dataGridRecentMembers.BackgroundColor = Color.FromArgb(46, 51, 73); // Koyu gri arka plan rengi
+            dataGridRecentMembers.DefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73); // Hücre arka plan rengi
+            dataGridRecentMembers.DefaultCellStyle.ForeColor = Color.White; // Metin rengi
+            
         }
 
         /// <summary>
@@ -49,6 +59,11 @@ namespace UI
                 {
                     chartMembershipType.Series["Series1"].Points.AddXY(entry.Key, entry.Value);
                 }
+                chartMembershipType.Series["Series1"].LabelForeColor = Color.Transparent;  // Etiketleri gizle
+                chartMembershipType.Series["Series1"].IsValueShownAsLabel = false; // Etiketleri gizle
+                chartMembershipType.Series["Series1"].LabelBackColor = Color.Transparent; // Etiket arka planını şeffaf yap
+                chartMembershipType.Series["Series1"].LabelBorderWidth = 0;  // Etiket kenarlıklarını kaldır
+                
             }
             catch (Exception ex)
             {
@@ -67,6 +82,11 @@ namespace UI
                 {
                     chartAgeDistribution.Series["Series1"].Points.AddXY(entry.Key, entry.Value);
                 }
+                chartAgeDistribution.Series["Series1"].LabelForeColor = Color.Transparent;  // Etiketleri gizle
+                chartAgeDistribution.Series["Series1"].IsValueShownAsLabel = false; // Etiketleri gizle
+                chartAgeDistribution.Series["Series1"].LabelBackColor = Color.Transparent; // Etiket arka planını şeffaf yap
+                chartAgeDistribution.Series["Series1"].LabelBorderWidth = 0;  // Etiket kenarlıklarını kaldır
+
             }
             catch (Exception ex)
             {
@@ -89,8 +109,11 @@ namespace UI
                 {
                     chartGenderDistribution.Series[0].Points.AddXY(gender.Key, gender.Value);
                 }
+                chartGenderDistribution.Series[0].LabelForeColor = Color.Transparent;  // Etiketleri gizle
+                chartGenderDistribution.Series[0].IsValueShownAsLabel = false; // Etiketleri gizle
+                chartGenderDistribution.Series[0].LabelBackColor = Color.Transparent; // Etiket arka planını şeffaf yap
+                chartGenderDistribution.Series[0].LabelBorderWidth = 0;  // Etiket kenarlıklarını kaldır
 
-                chartGenderDistribution.Series[0].IsValueShownAsLabel = true; // Show values on the chart
             }
             catch (Exception ex)
             {
@@ -181,8 +204,10 @@ namespace UI
                     // Add data points to the chart (X = Month, Y = TotalRevenue)
                     chartMonthlyRevenue.Series[0].Points.AddXY(dataPoint.Month, dataPoint.TotalRevenue);
                 }
-
-                chartMonthlyRevenue.Series[0].IsValueShownAsLabel = true; // Show labels on the chart
+                chartMonthlyRevenue.Series[0].LabelForeColor = Color.Transparent;
+                chartMonthlyRevenue.Series[0].IsValueShownAsLabel = false;
+                chartMonthlyRevenue.Series[0].LabelBackColor = Color.Transparent;
+                chartMonthlyRevenue.Series[0].LabelBorderWidth = 0;
             }
             catch (Exception ex)
             {

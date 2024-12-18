@@ -28,3 +28,6 @@ C:\Users\FangYuan\RiderProjects\GymManagement\UI\bin\Debug\EntityFramework.xml
 C:\Users\FangYuan\RiderProjects\GymManagement\UI\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\FangYuan\RiderProjects\GymManagement\UI\obj\Debug\UI.DashboardForm.resources
 C:\Users\FangYuan\RiderProjects\GymManagement\UI\obj\Debug\UI.MemberManagementForm.resources
+C:\Users\FangYuan\RiderProjects\GymManagement\UI\bin\Debug\ReaLTaiizor.dll
+C:\Users\FangYuan\RiderProjects\GymManagement\UI\bin\Debug\ReaLTaiizor.xml
+C:\Users\FangYuan\RiderProjects\GymManagement\UI\obj\Debug\UI.UserControllers.MemberView.resources

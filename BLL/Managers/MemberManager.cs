@@ -9,12 +9,19 @@ namespace BLL.Managers
     public class MemberManager
     {
         private readonly MemberRepository _memberRepository;
+        
+        
 
         public MemberManager()
         {
             _memberRepository = new MemberRepository();
         }
-
+        
+        
+        public List<Member> SearchMembers(string searchQuery)
+        {
+            return _memberRepository.SearchMembers(searchQuery);
+        }
         /// <summary>
         /// Adds a new member to the system after validation.
         /// </summary>

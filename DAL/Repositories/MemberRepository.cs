@@ -35,6 +35,46 @@ namespace DAL.Repositories
                 }
             }
         }
+        
+        public List<Member> SearchMembers(string searchQuery)
+        {
+            List<Member> members = new List<Member>();
+            using (var connection = SQLiteConnectionFactory.CreateConnection())
+            {
+                string query = @"SELECT * FROM Members 
+                         WHERE FirstName LIKE @SearchQuery 
+                            OR LastName LIKE @SearchQuery 
+                            OR Phone LIKE @SearchQuery 
+                            OR Email LIKE @SearchQuery";
+                using (var command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@SearchQuery", $"%{searchQuery}%");
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            members.Add(new Member
+                            {
+                                MemberID = reader.GetInt32(0),
+                                FirstName = reader.GetString(1),
+                                LastName = reader.GetString(2),
+                                Phone = reader.GetString(3),
+                                Email = reader.IsDBNull(4) ? null : reader.GetString(4),
+                                DateOfBirth = reader.IsDBNull(5) ? (DateTime?)null : reader.GetDateTime(5),
+                                Gender = reader.GetString(6),
+                                MembershipType = reader.GetString(7),
+                                StartDate = reader.GetDateTime(8),
+                                EndDate = reader.GetDateTime(9),
+                                IsActive = reader.GetBoolean(10)
+                            });
+                        }
+                    }
+                }
+            }
+            return members;
+        }
+        
+        
 
         /// <summary>
         /// Updates an existing member in the database.

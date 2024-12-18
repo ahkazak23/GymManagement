@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using UI.UserControllers;
 
 namespace UI
 {
@@ -13,7 +14,7 @@ namespace UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashboardForm());
+            Application.Run(new MemberManagementForm());
         }
     }
 }

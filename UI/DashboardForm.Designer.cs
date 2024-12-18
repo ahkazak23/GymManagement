@@ -46,8 +46,6 @@ namespace UI
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelTotalMembers = new System.Windows.Forms.Panel();
             this.lblTotalMembers = new System.Windows.Forms.Label();
             this.iconTotalMembers = new System.Windows.Forms.PictureBox();
@@ -115,36 +113,11 @@ namespace UI
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.lblTitle.Location = new System.Drawing.Point(12, 6);
+            this.lblTitle.Location = new System.Drawing.Point(22, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(195, 39);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Dashboard";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBox1.Location = new System.Drawing.Point(744, 14);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 25);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Search for something...";
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1051, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 25);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // panelTotalMembers
             // 
@@ -166,7 +139,7 @@ namespace UI
             this.lblTotalMembers.Location = new System.Drawing.Point(0, 32);
             this.lblTotalMembers.Margin = new System.Windows.Forms.Padding(10);
             this.lblTotalMembers.Name = "lblTotalMembers";
-            this.lblTotalMembers.Size = new System.Drawing.Size(170, 54);
+            this.lblTotalMembers.Size = new System.Drawing.Size(157, 54);
             this.lblTotalMembers.TabIndex = 2;
             this.lblTotalMembers.Text = "999999";
             // 
@@ -174,9 +147,9 @@ namespace UI
             // 
             this.iconTotalMembers.Dock = System.Windows.Forms.DockStyle.Right;
             this.iconTotalMembers.Image = ((System.Drawing.Image)(resources.GetObject("iconTotalMembers.Image")));
-            this.iconTotalMembers.Location = new System.Drawing.Point(170, 32);
+            this.iconTotalMembers.Location = new System.Drawing.Point(157, 32);
             this.iconTotalMembers.Name = "iconTotalMembers";
-            this.iconTotalMembers.Size = new System.Drawing.Size(49, 54);
+            this.iconTotalMembers.Size = new System.Drawing.Size(62, 54);
             this.iconTotalMembers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconTotalMembers.TabIndex = 1;
             this.iconTotalMembers.TabStop = false;
@@ -391,9 +364,7 @@ namespace UI
             // 
             this.panelScrollableContainer.AutoScroll = true;
             this.panelScrollableContainer.Controls.Add(this.panelRecentMembers);
-            this.panelScrollableContainer.Controls.Add(this.button1);
             this.panelScrollableContainer.Controls.Add(this.panelUpcomingExpirations);
-            this.panelScrollableContainer.Controls.Add(this.textBox1);
             this.panelScrollableContainer.Controls.Add(this.panelGenderDistribution);
             this.panelScrollableContainer.Controls.Add(this.lblTitle);
             this.panelScrollableContainer.Controls.Add(this.panelAgeDistribution);
@@ -584,7 +555,7 @@ namespace UI
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series3.LabelBackColor = System.Drawing.Color.White;
             series3.LabelBorderColor = System.Drawing.Color.White;
-            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.LabelForeColor = System.Drawing.Color.Transparent;
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             series3.YValuesPerPoint = 6;
@@ -749,10 +720,6 @@ namespace UI
         private System.Windows.Forms.Label label2;
 
         private System.Windows.Forms.Panel panelTotalMembers;
-
-        private System.Windows.Forms.Button button1;
-
-        private System.Windows.Forms.TextBox textBox1;
 
         private System.Windows.Forms.Label lblTitle;
 
