@@ -1,73 +1,12 @@
-# Rider IDE
-.idea/
-.idea.GymManagement/
-
-# Build folders
+# Ignore build folders
 bin/
 obj/
 
-# Packages folder
-packages/
-
-# SQLite database
-*.db
-
-# System files
-*.user
-*.lock
-*.log
-*.tmp
-.DS_Store
-
-# Backup files
-*.bak
-*.suo
-*.orig
-
-# Archive files
-*.zip
-*.rar
-*.7z
-*.tar
-*.gz
-
-# Images and design files
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.eps
-
-# Resharper or Rider settings
-*.DotSettings
-
-# Generated Resources
-*.Designer.cs
-*.resources
-
-# Build Folders
-bin/
-obj/
-
-# IDE Specific Files
+# Ignore IDE settings
 .idea/
 
-# Cache Files
-*.cache
-
-# Local Databases
-*.db
-
-# Ignore build files
-bin/
-obj/
-
-# Ignore Rider IDE configuration
-.idea/
-
-# Ignore database files
+# Ignore local database files
 *.db
 
 # Ignore NuGet packages
 packages/
-
